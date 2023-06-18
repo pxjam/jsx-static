@@ -1,7 +1,7 @@
 import React from 'react'
 import Main from '../templates/Main'
 
-function Index(props) {
+function Main(props) {
 	return (
 		<Main {...props}>
 			<h1>My Site</h1>
@@ -10,4 +10,4 @@ function Index(props) {
 	)
 }
 
-export default Index
+export default Main
