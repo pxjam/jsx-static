@@ -4,8 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	entry: {
-		index: './src/pages/index.jsx',
-		contacts: './src/pages/contacts.jsx'
+		// index: './src/pages/index.jsx',
+		contacts: './src/pages/contacts.js'
 		// Add more entry points for other pages if needed
 	},
 	output: {
@@ -39,29 +39,29 @@ module.exports = {
 			// 		{ loader: 'sass-loader', options: { sourceMap: true } }
 			// 	]
 			// },
-			{
-				test: /\.css$/i,
-				include: path.resolve(__dirname, 'src'),
-				exclude: /node_modules/,
-				use: [
-					{
-						loader: 'css-loader',
-						options: {
-							importLoaders: 0
-						}
-					}
-				]
-			},
-			{
-				test: /\.jsx$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader',
-					options: {
-						presets: ['@babel/preset-env', '@babel/preset-react']
-					}
-				}
-			}
+			// {
+			// 	test: /\.css$/i,
+			// 	include: path.resolve(__dirname, 'src'),
+			// 	exclude: /node_modules/,
+			// 	use: [
+			// 		{
+			// 			loader: 'css-loader',
+			// 			options: {
+			// 				importLoaders: 0
+			// 			}
+			// 		}
+			// 	]
+			// },
+			// {
+			// 	test: /\.jsx$/,
+			// 	exclude: /node_modules/,
+			// 	use: {
+			// 		loader: 'babel-loader',
+			// 		options: {
+			// 			presets: ['@babel/preset-env', '@babel/preset-react']
+			// 		}
+			// 	}
+			// }
 		]
 	},
 	resolve: {
@@ -76,11 +76,11 @@ module.exports = {
 		// 	template: './src/pages/index.jsx',
 		// 	chunks: ['index'],
 		// }),
-		new HtmlWebpackPlugin({
-			filename: 'contacts.html',
-			template: './src/pages/contacts.jsx',
-			chunks: ['contacts']
-		})
+		// new HtmlWebpackPlugin({
+		// 	filename: 'contacts.html',
+		// 	template: './src/pages/contacts.js',
+		// 	chunks: ['contacts']
+		// })
 		// Add more HtmlWebpackPlugin instances for other pages if needed
 	],
 	devServer: {
