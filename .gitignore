@@ -1,0 +1,13 @@
+dist
+/node_modules
+/.idea
+.project
+.classpath
+*.launch
+.settings/
+.DS_Store
+Thumbs.db
+tmp/
+*.tmp
+.env*
+!.env.example

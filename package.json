@@ -1,0 +1,17 @@
+{
+  "name": "jsx-static",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "make build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/register": "^7.22.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
