@@ -7,13 +7,14 @@ import cssnano from 'cssnano'
 import terser from '@rollup/plugin-terser'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
-import html2 from 'rollup-plugin-html2'
+import jsxToHtml from './packages/rollup-plugin-jsx-to-html/index.js'
+// import html2 from 'rollup-plugin-html2'
 // import htmlTpl from 'src/templates/index.html'
 
 export default {
 	input: {
-		index: 'src/pages/index.jsx',
-		// contacts: 'src/pages/contacts.jsx'
+		// index: 'src/pages/index.js',
+		contacts: 'src/pages/contacts.jsx'
 		// Add more entry points here if needed
 	},
 	output: {
@@ -30,19 +31,23 @@ export default {
 			babelHelpers: 'bundled',
 			exclude: /node_modules/
 		}),
-		postcss({
-			extract: true,
-			modules: true,
-			plugins: [
-				autoprefixer(),
-				cssnano()
-			],
-			autoModules: true
+		jsxToHtml({
+			include: /\.jsx$/, // Specify the file extension for JSX files
+			// Other options for rollup-pluginutils can be specified here
 		}),
-		html2({
-			template: 'src/templates/template.html',
-			fileName: 'contacts.html'
-		}),
+		// postcss({
+		// 	extract: true,
+		// 	modules: true,
+		// 	plugins: [
+		// 		autoprefixer(),
+		// 		cssnano()
+		// 	],
+		// 	autoModules: true
+		// }),
+		// html2({
+		// 	template: 'src/templates/template.html',
+		// 	fileName: 'contacts.html'
+		// }),
 		serve({
 			open: true,
 			contentBase: 'dist',

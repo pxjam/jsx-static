@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import { buildPage } from './build'
 
-import Home from './pages/main.jsx'
+import Home from './pages/contacts.jsx'
 
 // build the page
 buildPage('index', ReactDOMServer.renderToStaticMarkup(
