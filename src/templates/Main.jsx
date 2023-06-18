@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../components/Header/Header'
 
 function Main({ title, description, ...props }) {
 	return (
@@ -11,6 +12,7 @@ function Main({ title, description, ...props }) {
 			{props.head}
 		</head>
 		<body>
+			<Header title={title} description={description} />
 			{props.children}
 		</body>
 		</html>
